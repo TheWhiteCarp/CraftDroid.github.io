@@ -3,80 +3,440 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CraftDroid — Dedicated Minecraft Server Host for Android</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="CraftDroid allows you to run high-performance Java, Bedrock, and Crossplay Minecraft servers directly on your Android device.">
+  <title>Privacy Policy - CraftDroid</title>
+  <meta name="description" content="Privacy Policy for CraftDroid - An independent, local-first Minecraft server hosting and management utility for Android.">
+  <link rel="canonical" href="https://thewhitecarp.github.io/CraftDroid.github.io/">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card-bg: #f8fafc;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-light: #eff6ff;
+      --badge-bg: #e0e7ff;
+      --badge-text: #3730a3;
+      --callout-bg: #f1f5f9;
+      --callout-border: #94a3b8;
+      --code-bg: #f1f5f9;
+      --warning-bg: #fffbeb;
+      --warning-border: #f59e0b;
+      --warning-text: #92400e;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f19;
+        --card-bg: #111827;
+        --text: #f3f4f6;
+        --text-muted: #9ca3af;
+        --border: #1f2937;
+        --primary: #3b82f6;
+        --primary-light: #1e293b;
+        --badge-bg: #312e81;
+        --badge-text: #c7d2fe;
+        --callout-bg: #1e293b;
+        --callout-border: #475569;
+        --code-bg: #1f2937;
+        --warning-bg: #1c1917;
+        --warning-border: #d97706;
+        --warning-text: #fef3c7;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Top Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .nav-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: all 0.15s ease-in-out;
+    }
+
+    .nav-tab:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-tab.active {
+      background-color: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 36px;
+    }
+
+    .app-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      color: var(--text);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background-color: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .callout {
+      background: var(--callout-bg);
+      border-left: 4px solid var(--callout-border);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .callout-warning {
+      background: var(--warning-bg);
+      border-left-color: var(--warning-border);
+      color: var(--warning-text);
+    }
+
+    .callout-warning strong {
+      color: var(--warning-border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--card-bg);
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+
+<div class="container">
+  <nav class="nav-tabs" aria-label="Documentation Navigation">
+    <a href="privacy.html" class="nav-tab active">🛡️ Privacy Policy</a>
+    <a href="terms.html" class="nav-tab">📜 Terms of Service &amp; EULA</a>
+    <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener" class="nav-tab">💻 GitHub Repository</a>
+  </nav>
+
   <header>
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        CraftDroid <span class="badge">Docs & Legal</span>
-      </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
-      </nav>
+    <span class="app-badge">Official Policy</span>
+    <h1>Privacy Policy for CraftDroid</h1>
+    <div class="meta">
+      <strong>Application Name:</strong> CraftDroid &bull; 
+      <strong>Package ID:</strong> <code>com.example.craftdroid</code> &bull; 
+      <strong>Developer / Publisher:</strong> TheWhiteCarp &bull; 
+      <strong>Effective Date:</strong> September 27, 2026 &bull; 
+      <strong>Status:</strong> <span style="color: #16a34a; font-weight: 600;">Verified GitHub Pages Deployment</span>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>CraftDroid Server Host</h1>
-      <p>Host high-performance Java, Bedrock, and Crossplay Minecraft servers directly on your Android device with zero root required.</p>
-      <div class="btn-group">
-        <a href="privacy.html" class="btn btn-primary">Privacy Policy</a>
-        <a href="terms.html" class="btn btn-secondary">Terms & User Agreement</a>
-      </div>
-    </section>
-
-    <div class="disclaimer-box">
-      <strong>NOT AN OFFICIAL MINECRAFT PRODUCT</strong>
-      NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a registered trademark of Mojang AB / Microsoft Corporation.
+    <div class="callout callout-warning">
+      <strong>Mojang Studios Non-Affiliation Disclaimer</strong>
+      NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+      Minecraft is a registered trademark of Mojang AB / Microsoft Corporation. CraftDroid is an independent third-party server hosting utility developed by TheWhiteCarp.
     </div>
 
-    <section class="card">
-      <h2>About CraftDroid</h2>
-      <p>
-        CraftDroid is a native Android application designed to provide reliable, low-overhead dedicated server hosting on modern ARM64 mobile hardware.
-      </p>
+    <section>
+      <h2>1. Introduction &amp; Core Privacy Philosophy</h2>
+      <p>CraftDroid ("we", "us", or "our", operated by TheWhiteCarp) is built with an uncompromising <strong>local-first, privacy-by-design architecture</strong>. CraftDroid enables users to run, configure, and manage Minecraft Java Edition (PaperMC, PurpurMC, FabricMC) and Minecraft Bedrock Dedicated Servers directly on their Android devices utilizing local container runtimes (PRoot and Box64).</p>
+      <p>We firmly believe that your server worlds, player inventories, private chat logs, and game configurations belong exclusively to you. To ensure absolute transparency, we delineate our application's direct operations and third-party network integrations below:</p>
       <ul>
-        <li><strong>☕ Java Edition:</strong> Powered by official headless OpenJDK runtimes, supporting PaperMC, PurpurMC, FabricMC, and Vanilla servers.</li>
-        <li><strong>🪨 Bedrock Edition:</strong> Powered by official Mojang Bedrock Dedicated Server (BDS) x86_64 binaries executed via Box64 dynamic recompilation.</li>
-        <li><strong>☕+🪨 Crossplay Edition:</strong> Powered by PaperMC with integrated GeyserMC and Floodgate, enabling Bedrock and Java players to join the same world simultaneously.</li>
-        <li><strong>🌐 Global Tunneling:</strong> Built-in Playit.gg Anycast agent integration allowing public multiplayer access without port forwarding.</li>
-        <li><strong>🛡️ Hardware & Thermal Protection:</strong> Real-time CPU and battery temperature monitoring with automatic emergency shutdowns to safeguard mobile device health.</li>
+        <li><strong>Zero Developer Data Collection (First-Party):</strong> We do not operate external application servers, central player databases, analytics trackers, or user profiling systems. We do not collect, monetize, log, or transmit your personal data, email address, IP address, or game world files. No account registration or sign-in is required to use CraftDroid.</li>
+        <li><strong>100% On-Device Local Server Execution:</strong> Minecraft server processes, JVM environments, world saves, player data files, and server properties are executed and stored entirely within your device's private, sandboxed app storage.</li>
+        <li><strong>Third-Party Networking &amp; Advertising:</strong> To allow friends over the internet to connect to your local server without complex router configuration, CraftDroid integrates the optional Playit.gg tunneling client. In addition, ad-supported builds integrate Google AdMob to fund ongoing maintenance. Third-party data handling is detailed in Section 4.</li>
       </ul>
     </section>
 
-    <section class="card">
-      <h2>Legal & Policy Documentation</h2>
-      <p>
-        Please review our legal disclosures, data handling policies, and terms of service before using the CraftDroid application:
-      </p>
-      <div class="btn-group" style="justify-content: flex-start;">
-        <a href="privacy.html" class="btn btn-secondary">📜 Read Privacy Policy</a>
-        <a href="terms.html" class="btn btn-secondary">⚖️ Read Terms of Service & EULA</a>
-      </div>
+    <section>
+      <h2>2. What Information We Do NOT Collect</h2>
+      <p>Unlike cloud server hosting providers, CraftDroid maintains a strict zero-telemetry policy for the developer. Specifically:</p>
+      <ul>
+        <li><strong>No Personal Identifiers:</strong> We do not ask for or collect your name, email, phone number, physical address, or account credentials.</li>
+        <li><strong>No World or Gameplay Inspection:</strong> Your world seed, map files, inventory data, server console logs, operator lists (<code>ops.json</code>), player whitelists (<code>whitelist.json</code>), and in-game chat messages are never transmitted to or visible to the developer.</li>
+        <li><strong>No Biometric or Device Location Data:</strong> CraftDroid does not access or collect GPS location, Bluetooth beacons, camera, microphone, or contacts.</li>
+        <li><strong>No Analytics or Tracking SDKs:</strong> CraftDroid contains zero third-party behavioral analytics, crashlytics scrapers, or session recording SDKs.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Local Storage, World Custody &amp; Data Retention</h2>
+      <p>All server installations, JVM dependencies, configurations, and world files reside strictly in local storage on your Android device:</p>
+      <ul>
+        <li><strong>Sandboxed Rootfs Directory:</strong> Server runtime files (OpenJDK, Paper/Purpur JARs, Bedrock server binaries) are stored inside the app-specific internal directory: <code>/data/data/com.example.craftdroid/files/</code>.</li>
+        <li><strong>User Storage Access Framework (SAF):</strong> When creating world backups or exporting server archives (<code>.tar.gz</code> / <code>.zip</code>), CraftDroid uses Android's native Storage Access Framework. You retain complete custody over the destination directory (e.g., Downloads, Documents, or external SD card).</li>
+        <li><strong>Complete User Deletion Rights:</strong> You can completely erase any server environment, reset credentials, or clear worlds at any time through the in-app Worlds and Settings menus. Clearing application data via Android System Settings or uninstalling CraftDroid permanently deletes all local server instances, world data, and configurations immediately from your device.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Third-Party Services &amp; Network Data Transits</h2>
+      <p>To provide multiplayer internet connectivity, fetch official game server binaries, and deliver advertisements, CraftDroid interacts with the following external services:</p>
+
+      <h3>A. Playit.gg (Encrypted Tunneling Service)</h3>
+      <p>CraftDroid integrates the open-source Playit.gg agent daemon to enable multiplayer internet connections without port forwarding:</p>
+      <ul>
+        <li><strong>Network Transit:</strong> When a tunnel is activated, incoming Minecraft multiplayer packets (TCP port 25565 for Java, UDP port 19132 for Bedrock) are routed securely through Playit.gg's global edge network to your Android device.</li>
+        <li><strong>Data Processed by Playit:</strong> Playit.gg routes connection traffic and processes connecting player IP addresses to establish routing channels and mitigate DDoS attacks. Playit does not inspect the contents of your Minecraft world files.</li>
+        <li><strong>Playit Account Management:</strong> Account claiming and tunnel assignment occur directly between your browser and Playit.gg. Your Playit secret tokens are saved exclusively in your local Android device storage.</li>
+        <li><strong>Privacy Policy:</strong> For details on Playit.gg's data handling, consult the <a href="https://playit.gg/privacy" target="_blank" rel="noopener">Playit.gg Privacy Policy</a>.</li>
+      </ul>
+
+      <h3>B. Google AdMob (Advertising Network)</h3>
+      <p>Public releases of CraftDroid on Google Play display advertisements via Google AdMob to support ongoing development and maintenance:</p>
+      <ul>
+        <li><strong>Data Processed by AdMob:</strong> The Google Mobile Ads SDK may collect device identifiers (such as the Google Advertising ID / GAID), coarse IP-based approximate location (for geographical ad serving and fraud detection), device model, carrier, and ad interaction telemetry.</li>
+        <li><strong>User Choice &amp; Privacy Regulations (GDPR / CCPA):</strong> Users in the European Economic Area (EEA) and the UK are presented with a consent modal (via Google UMP) to select personalized ads, non-personalized ads, or revoke consent. All users can reset or delete their Advertising ID at any time via Android System Settings: <code>Settings &gt; Google &gt; Ads &gt; Delete advertising ID</code>.</li>
+        <li><strong>AdMob Governance:</strong> Review <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Advertising Privacy &amp; Terms</a> for additional information.</li>
+      </ul>
+
+      <h3>C. Upstream Server Binary &amp; Engine Repositories</h3>
+      <p>When you install or update a server engine, CraftDroid communicates directly with official upstream repositories via encrypted HTTPS:</p>
+      <ul>
+        <li><strong>Java Edition Engines:</strong> PaperMC API (<code>api.papermc.io</code>), PurpurMC API (<code>api.purpurmc.org</code>), and FabricMC Meta (<code>meta.fabricmc.net</code>).</li>
+        <li><strong>Bedrock Edition Binaries:</strong> Mojang Official Bedrock Dedicated Server CDN (<code>minecraft.net/bedrockdedicatedserver</code>).</li>
+        <li><strong>Crossplay Bridges:</strong> GeyserMC &amp; Floodgate API (<code>download.geysermc.org</code>) and ViaVersion repositories.</li>
+        <li><strong>Runtimes:</strong> Adoptium / OpenJDK headless Linux binaries.</li>
+        <li><strong>Transit Scope:</strong> Only standard HTTP GET requests are executed to download the requested release JARs and ZIP archives. No personal data, telemetry, or device identifiers are shared with these repositories.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Android Device Permissions &amp; Technical Justifications</h2>
+      <p>In adherence to the Google Play Developer Policy and the Principle of Least Privilege, CraftDroid requests only the permissions strictly required to host a server environment:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Type</th>
+            <th>Technical Justification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>android.permission.INTERNET</code></td>
+            <td>Normal</td>
+            <td>Required for downloading server software binaries, establishing Playit.gg encrypted tunnels, routing multiplayer game traffic, and displaying AdMob ads.</td>
+          </tr>
+          <tr>
+            <td><code>android.permission.FOREGROUND_SERVICE</code></td>
+            <td>Normal</td>
+            <td>Required to keep the Minecraft server engine and tunneling daemons alive in the background while players are connected and the app is minimized.</td>
+          </tr>
+          <tr>
+            <td><code>android.permission.FOREGROUND_SERVICE_SPECIAL_USE</code></td>
+            <td>Special Use</td>
+            <td>Declared for long-running, user-initiated local server execution on Android 14+ (API 34).</td>
+          </tr>
+          <tr>
+            <td><code>android.permission.POST_NOTIFICATIONS</code></td>
+            <td>Runtime (Android 13+)</td>
+            <td>Required to display the persistent server status notification, server lifecycle events (starting, running, stopping), and thermal emergency alerts.</td>
+          </tr>
+          <tr>
+            <td><code>android.permission.WAKE_LOCK</code></td>
+            <td>Normal</td>
+            <td>Prevents the device's CPU from entering deep sleep while players are connected to an active server session.</td>
+          </tr>
+          <tr>
+            <td><code>android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
+            <td>Special</td>
+            <td>Allows users to exempt CraftDroid from aggressive OEM background task killers, preventing premature server crashes.</td>
+          </tr>
+          <tr>
+            <td><code>android.permission.VIBRATE</code></td>
+            <td>Normal</td>
+            <td>Provides haptic feedback during critical thermal threshold alerts and server state transitions.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>CraftDroid <strong>does not</strong> request or access sensitive permissions including: Camera, Microphone, GPS Location, Contacts, Call Logs, SMS, or External Broad Storage (MANAGE_EXTERNAL_STORAGE).</p>
+    </section>
+
+    <section>
+      <h2>6. Mojang Studios EULA &amp; Brand Compliance</h2>
+      <p>All users hosting Minecraft servers using CraftDroid must acknowledge and comply with Mojang Studios' legal guidelines:</p>
+      <ul>
+        <li><strong>End User License Agreement (EULA):</strong> Before starting a Java server, users must affirmatively agree that <code>eula=true</code> as required by Mojang Studios (<a href="https://www.minecraft.net/en-us/eula" target="_blank" rel="noopener">https://www.minecraft.net/en-us/eula</a>).</li>
+        <li><strong>Bedrock Dedicated Server EULA:</strong> Bedrock server instances are governed by the Minecraft Bedrock Server EULA and Privacy Policy.</li>
+        <li><strong>Commercial Usage Guidelines:</strong> Server monetization, donation stores, and VIP ranks run on your server must comply strictly with the <a href="https://www.minecraft.net/en-us/usage-guidelines" target="_blank" rel="noopener">Mojang Commercial Usage Guidelines</a>. CraftDroid does not facilitate, manage, or take cuts from in-game monetization.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Hardware Safety, Thermal Protection &amp; Battery Notice</h2>
+      <p>Hosting a dedicated game server on mobile hardware produces sustained CPU computation and heat generation. CraftDroid incorporates protective features, including:</p>
+      <ul>
+        <li><strong>Automatic Thermal Shutdown:</strong> Monitors device thermal zones and gracefully initiates server shutdown when temperatures exceed safe limits (default: 48°C emergency stop).</li>
+        <li><strong>User Operational Responsibility:</strong> Users should operate servers in well-ventilated conditions, avoid thermal-insulating protective cases during long sessions, and use quality chargers to preserve battery health. The developer is not liable for device thermal wear or battery degradation resulting from continuous server operation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Children's Privacy (COPPA &amp; Age Restrictions)</h2>
+      <p>CraftDroid is a technical utility designed for server administration. CraftDroid is not directed to children under the age of 13 (or under 16 within the EEA). We do not knowingly solicit, collect, or store personal information from children.</p>
+      <p>Users must meet the age requirements established by Mojang Studios and Microsoft to manage game accounts and agree to the Minecraft EULA.</p>
+    </section>
+
+    <section>
+      <h2>9. International Privacy Rights &amp; Regulatory Compliance</h2>
+      <h3>A. European Economic Area (EEA) &amp; United Kingdom (GDPR)</h3>
+      <p>Because all personal server data resides strictly on your physical device, you maintain full data sovereignty. You can inspect, modify, or erase all data at any time by clearing application data or deleting your worlds. For AdMob advertising data, consent preferences are managed via Google's UMP consent dialog.</p>
+
+      <h3>B. California Privacy Rights (CCPA / CPRA)</h3>
+      <p>CraftDroid does not sell or share personal information or sensitive personal information to data brokers or third parties. Device identifiers processed by AdMob for contextual or interest-based advertising can be opted out through Android device settings.</p>
+    </section>
+
+    <section>
+      <h2>10. Policy Updates &amp; Amendments</h2>
+      <p>We may update this Privacy Policy periodically to reflect app updates, new upstream server engines, or regulatory revisions. Updates will be published on this GitHub Pages site with an updated Effective Date. The latest policy is always accessible in-app via the Settings menu and online at:</p>
+      <p><a href="https://thewhitecarp.github.io/CraftDroid.github.io/privacy.html">https://thewhitecarp.github.io/CraftDroid.github.io/privacy.html</a></p>
+    </section>
+
+    <section>
+      <h2>11. Developer Contact Information</h2>
+      <p>If you have any questions, suggestions, or concerns regarding CraftDroid's privacy practices or legal terms, please reach out to us:</p>
+      <ul>
+        <li><strong>Developer / Publisher:</strong> TheWhiteCarp</li>
+        <li><strong>Contact Email:</strong> <a href="mailto:thewhitecarp@protonmail.com">thewhitecarp@protonmail.com</a></li>
+        <li><strong>Project Repository:</strong> <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener">https://github.com/TheWhiteCarp/CraftDroid.github.io</a></li>
+        <li><strong>Application:</strong> CraftDroid (<code>com.example.craftdroid</code>)</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <p>&copy; 2026 TheWhiteCarp. CraftDroid is an independent project.</p>
-      <p class="footer-disclaimer">
-        Minecraft is a trademark of Mojang Synergies AB. CraftDroid is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft.
-      </p>
-    </div>
+    &copy; 2026 TheWhiteCarp. All rights reserved. &bull; CraftDroid for Android &bull; Verified via GitHub Pages
   </footer>
+</div>
+
 </body>
 </html>

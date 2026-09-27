@@ -3,126 +3,399 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service & User Agreements — CraftDroid</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Terms of Service, End User License Agreements, Mojang compliance disclaimers, and Open-Source software attributions for CraftDroid.">
+  <title>Terms of Service - CraftDroid</title>
+  <meta name="description" content="Terms of Service, End User Agreement, and Mojang EULA Compliance for CraftDroid.">
+  <link rel="canonical" href="https://thewhitecarp.github.io/CraftDroid.github.io/terms.html">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card-bg: #f8fafc;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-light: #eff6ff;
+      --badge-bg: #e0e7ff;
+      --badge-text: #3730a3;
+      --callout-bg: #f1f5f9;
+      --callout-border: #94a3b8;
+      --code-bg: #f1f5f9;
+      --warning-bg: #fffbeb;
+      --warning-border: #f59e0b;
+      --warning-text: #92400e;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f19;
+        --card-bg: #111827;
+        --text: #f3f4f6;
+        --text-muted: #9ca3af;
+        --border: #1f2937;
+        --primary: #3b82f6;
+        --primary-light: #1e293b;
+        --badge-bg: #312e81;
+        --badge-text: #c7d2fe;
+        --callout-bg: #1e293b;
+        --callout-border: #475569;
+        --code-bg: #1f2937;
+        --warning-bg: #1c1917;
+        --warning-border: #d97706;
+        --warning-text: #fef3c7;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Top Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .nav-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: all 0.15s ease-in-out;
+    }
+
+    .nav-tab:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-tab.active {
+      background-color: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 36px;
+    }
+
+    .app-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      color: var(--text);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background-color: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .callout {
+      background: var(--callout-bg);
+      border-left: 4px solid var(--callout-border);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .callout-warning {
+      background: var(--warning-bg);
+      border-left-color: var(--warning-border);
+      color: var(--warning-text);
+    }
+
+    .callout-warning strong {
+      color: var(--warning-border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--card-bg);
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+
+<div class="container">
+  <nav class="nav-tabs" aria-label="Documentation Navigation">
+    <a href="privacy.html" class="nav-tab">🛡️ Privacy Policy</a>
+    <a href="terms.html" class="nav-tab active">📜 Terms of Service &amp; EULA</a>
+    <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener" class="nav-tab">💻 GitHub Repository</a>
+  </nav>
+
   <header>
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        CraftDroid <span class="badge">Legal</span>
-      </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html" class="active">Terms of Service</a></li>
-        </ul>
-      </nav>
+    <span class="app-badge">User Agreement</span>
+    <h1>Terms of Service for CraftDroid</h1>
+    <div class="meta">
+      <strong>Application Name:</strong> CraftDroid &bull; 
+      <strong>Package ID:</strong> <code>com.example.craftdroid</code> &bull; 
+      <strong>Developer / Publisher:</strong> TheWhiteCarp &bull; 
+      <strong>Effective Date:</strong> September 27, 2026 &bull; 
+      <strong>Status:</strong> <span style="color: #16a34a; font-weight: 600;">Verified GitHub Pages Deployment</span>
     </div>
   </header>
 
   <main>
-    <div class="card">
-      <h2>Terms of Service &amp; User Agreements</h2>
-      <p><strong>Effective Date:</strong> September 27, 2026</p>
-      <p><strong>Last Updated:</strong> September 27, 2026</p>
-
-      <div class="disclaimer-box">
-        <strong>CRITICAL LEGAL DISCLAIMER — MOJANG STUDIOS / MICROSOFT</strong>
-        NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.<br>
-        Minecraft is a registered trademark of Mojang AB / Microsoft Corporation. CraftDroid is an independent third-party tool and server hosting management utility.
-      </div>
-
-      <h3>1. Acceptance of Terms</h3>
-      <p>
-        By downloading, installing, or using the CraftDroid application ("the App"), you agree to be bound by these Terms of Service ("Terms") and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using the application.
-      </p>
-
-      <h3>2. Mojang End User License Agreement (EULA) Compliance</h3>
-      <p>
-        CraftDroid facilitates the download and execution of official Minecraft Java server software and Bedrock Dedicated Server binaries provided by Mojang Studios.
-      </p>
-      <ul>
-        <li>By launching a Minecraft server through CraftDroid, you explicitly acknowledge and agree to comply with the official <a href="https://www.minecraft.net/en-us/eula" target="_blank" rel="noopener">Minecraft End User License Agreement (EULA)</a>.</li>
-        <li>You also agree to abide by the <a href="https://www.minecraft.net/en-us/usage-guidelines" target="_blank" rel="noopener">Mojang Commercial Usage Guidelines</a> governing servers and community hosting.</li>
-        <li>CraftDroid tracks your explicit acknowledgement of these agreements within the application. You must not circumvent or disable these checks.</li>
-      </ul>
-
-      <h3>3. User Responsibilities &amp; Hosted Content</h3>
-      <p>
-        You are the sole operator and administrator of any Minecraft server instance deployed via CraftDroid on your device:
-      </p>
-      <ul>
-        <li><strong>Server Conduct:</strong> You are solely responsible for the actions, behavior, and content generated by players connecting to your server instance.</li>
-        <li><strong>Prohibited Use:</strong> You agree not to use CraftDroid, its tunneling integration, or hosted server instances to distribute malicious software, conduct denial-of-service attacks, host defamatory or illegal content, or infringe upon the intellectual property rights of third parties.</li>
-        <li><strong>Mods and Add-ons:</strong> You are responsible for ensuring that all third-party mods, plugins, datapacks, and resource packs downloaded via Modrinth or manual file placement comply with their respective licenses and Minecraft EULA rules.</li>
-      </ul>
-
-      <h3>4. Hardware Operation &amp; Limitation of Liability</h3>
-      <div class="alert alert-warning">
-        <span>⚠️</span>
-        <div>
-          <strong>Important Hardware Notice:</strong> Running dedicated multiplayer game servers on mobile phones generates substantial CPU and thermal load. While CraftDroid includes automated thermal protection watchdogs, operating mobile hardware under sustained high workloads requires responsible usage.
-        </div>
-      </div>
-      <p>
-        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:
-      </p>
-      <ul>
-        <li>CRAFTDROID IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</li>
-        <li>IN NO EVENT SHALL THE DEVELOPER ("THEWHITECARP") BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OF OR INABILITY TO USE THE APPLICATION, INCLUDING BUT NOT LIMITED TO: DEVICE OVERHEATING, BATTERY HEALTH DEGRADATION, HARDWARE WEAR, LOSS OF DATA, CORRUPTION OF MINECRAFT WORLDS, OR NETWORK DOWNTIME.</li>
-        <li>You acknowledge that power interruptions, battery depletion, or operating system low-memory kills can cause unsaved world data loss. You are strongly advised to regularly use CraftDroid's built-in World Backup tools.</li>
-      </ul>
-
-      <h3>5. Third-Party Services &amp; Network Tunneling</h3>
-      <p>
-        The application integrates optional tunneling services provided by <strong>Playit.gg</strong> to allow remote multiplayer connections. The developer makes no guarantee regarding the uptime, latency, bandwidth, or security of third-party tunneling servers. Your use of Playit.gg is subject to the <a href="https://playit.gg/terms" target="_blank" rel="noopener">Playit.gg Terms of Service</a>.
-      </p>
-
-      <h3>6. Open Source Software Credits &amp; Attributions</h3>
-      <p>
-        CraftDroid is made possible thanks to outstanding open-source projects. We gratefully acknowledge and comply with their licenses:
-      </p>
-      <ul>
-        <li><strong>PRoot:</strong> Termux PRoot translation layer (Licensed under GNU General Public License v2.0).</li>
-        <li><strong>Box64:</strong> Linux Userspace x86_64 Emulator for ARM64 by ptitSeb (Licensed under the MIT License).</li>
-        <li><strong>Playit Agent:</strong> Playit.gg CLI client daemon (Licensed under the BSD 2-Clause License).</li>
-        <li><strong>OpenJDK:</strong> Headless Java Development Kit / JRE runtimes (Licensed under GNU General Public License v2 with Classpath Exception).</li>
-        <li><strong>PaperMC, PurpurMC, FabricMC:</strong> High-performance Minecraft Java server software.</li>
-        <li><strong>GeyserMC &amp; Floodgate:</strong> Bedrock to Java protocol translation bridge (Licensed under the MIT License).</li>
-        <li><strong>ViaVersion:</strong> Minecraft protocol translation library (Licensed under the GNU General Public License v3.0).</li>
-      </ul>
-
-      <h3>7. Termination and Governing Law</h3>
-      <p>
-        We reserve the right to modify or discontinue the application at any time without notice. These Terms shall be governed by and construed in accordance with the laws applicable in your jurisdiction, without regard to its conflict of law provisions.
-      </p>
-
-      <h3>8. Contact &amp; Questions</h3>
-      <p>
-        For inquiries regarding these Terms of Service or user agreements, please contact the developer via our official repository:
-      </p>
-      <p>
-        <strong>GitHub Repository:</strong> <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener">https://github.com/TheWhiteCarp/CraftDroid.github.io</a>
-      </p>
+    <div class="callout callout-warning">
+      <strong>Mojang Studios Non-Affiliation Disclaimer</strong>
+      NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.<br><br>
+      Minecraft is a registered trademark of Mojang AB / Microsoft Corporation. CraftDroid is an independent third-party server hosting utility developed by TheWhiteCarp. CraftDroid is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft Corporation.
     </div>
+
+    <section>
+      <h2>1. Agreement to Terms</h2>
+      <p>By downloading, installing, accessing, or using CraftDroid (the "Application"), you agree to be legally bound by these Terms of Service (the "Terms"). If you do not agree to these Terms, do not install or use the Application.</p>
+      <p>CraftDroid is an Android software utility providing local containerized environments (PRoot / Box64) to facilitate the execution of Minecraft server software on mobile hardware.</p>
+    </section>
+
+    <section>
+      <h2>2. Compliance with Mojang Studios EULA &amp; Guidelines</h2>
+      <p>Your use of any Minecraft server software downloaded, configured, or executed through CraftDroid is strictly conditioned upon your acceptance of and ongoing compliance with Mojang Studios' official terms:</p>
+      <ul>
+        <li><strong>Minecraft End User License Agreement (EULA):</strong> Before initializing any Java Edition server, you are required by Mojang Studios to accept their EULA by setting <code>eula=true</code>. You can review the full EULA at <a href="https://www.minecraft.net/en-us/eula" target="_blank" rel="noopener">https://www.minecraft.net/en-us/eula</a>.</li>
+        <li><strong>Minecraft Commercial Usage Guidelines:</strong> If you accept donations, monetize server access, sell virtual cosmetic items, or run commercial services on your server, you must adhere strictly to Mojang's <a href="https://www.minecraft.net/en-us/usage-guidelines" target="_blank" rel="noopener">Commercial Usage Guidelines</a>. CraftDroid has zero involvement in and accepts no liability for server monetization schemes.</li>
+        <li><strong>Bedrock Dedicated Server EULA:</strong> Bedrock server binaries provided via Mojang's CDN are governed by the Microsoft/Mojang Bedrock Dedicated Server terms.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. User Responsibility &amp; Content Liability</h2>
+      <p>CraftDroid functions solely as an administrative execution engine. You are solely and exclusively responsible for:</p>
+      <ul>
+        <li><strong>Server Management &amp; Access Controls:</strong> Managing server operators (<code>ops.json</code>), player whitelists, banned players/IPs, and server ports.</li>
+        <li><strong>In-Game Conduct &amp; Player Chat:</strong> All interactions, communications, chat logs, and player behaviors occurring within any server you host. The developer has no ability to moderate, monitor, or access your hosted server.</li>
+        <li><strong>Third-Party Plugins &amp; Mods:</strong> All modifications, plugins (Spigot, Paper, Purpur), Fabric mods, and resource packs downloaded and installed by you. You assume all risks associated with malicious or buggy plugins.</li>
+        <li><strong>World Backups &amp; Data Loss:</strong> Ensuring adequate world backups via the in-app backup utility or Storage Access Framework. The developer is not liable for world file corruption, power loss, or unrecoverable save states.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Mobile Hardware &amp; Thermal Protection Disclaimer</h2>
+      <div class="callout">
+        <strong>Hardware Operation Notice</strong>
+        Executing a continuous multi-threaded Java or Bedrock server on a mobile phone causes sustained CPU/GPU workload, battery depletion, and thermal output.
+      </div>
+      <p>By using CraftDroid, you explicitly acknowledge and agree that:</p>
+      <ul>
+        <li>CraftDroid provides automated thermal monitoring tools (such as thermal auto-shutdown at configurable thresholds), but the ultimate responsibility for operating conditions rests with you.</li>
+        <li>You must ensure proper ventilation, avoid covering the device or using insulating cases during intensive hosting, and avoid operating in excessively hot ambient environments.</li>
+        <li>To the maximum extent permitted by applicable law, <strong>TheWhiteCarp disclaims any and all liability for device overheating, battery wear, hardware damage, thermal throttling, or component failure</strong> resulting from prolonged or improper server hosting on mobile hardware.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Third-Party Network Services (Playit.gg)</h2>
+      <p>CraftDroid provides built-in integration with the Playit.gg tunneling service to enable multiplayer connectivity over the public internet without port forwarding:</p>
+      <ul>
+        <li>Your use of Playit.gg is subject to the <a href="https://playit.gg/terms" target="_blank" rel="noopener">Playit.gg Terms of Service</a> and <a href="https://playit.gg/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+        <li>TheWhiteCarp does not own, operate, or guarantee the uptime, bandwidth, latency, or availability of the Playit.gg routing infrastructure.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Open Source Software &amp; Attributions</h2>
+      <p>CraftDroid incorporates, orchestrates, or interfaces with several open-source technologies. We gratefully recognize these contributions:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Primary Author / Maintainers</th>
+            <th>License</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>PRoot</strong></td>
+            <td>Termux / proot-me Team</td>
+            <td>GNU General Public License v2.0 (GPLv2)</td>
+          </tr>
+          <tr>
+            <td><strong>Box64</strong></td>
+            <td>Sébastien Chevalier (ptitSeb)</td>
+            <td>MIT License</td>
+          </tr>
+          <tr>
+            <td><strong>Playit Agent</strong></td>
+            <td>Playit.gg Team</td>
+            <td>BSD 2-Clause License</td>
+          </tr>
+          <tr>
+            <td><strong>OpenJDK</strong></td>
+            <td>Oracle, Eclipse Adoptium &amp; OpenJDK Contributors</td>
+            <td>GPLv2 with Classpath Exception</td>
+          </tr>
+          <tr>
+            <td><strong>PaperMC / PurpurMC</strong></td>
+            <td>PaperMC &amp; PurpurMC Teams</td>
+            <td>GPLv3 / MIT</td>
+          </tr>
+          <tr>
+            <td><strong>GeyserMC &amp; Floodgate</strong></td>
+            <td>GeyserMC Project</td>
+            <td>MIT License</td>
+          </tr>
+          <tr>
+            <td><strong>ViaVersion</strong></td>
+            <td>ViaVersion Team</td>
+            <td>GPLv3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>7. Disclaimer of Warranties</h2>
+      <p>CRAFTDROID IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APPLICATION WILL OPERATE ERROR-FREE, UNINTERRUPTED, OR FREE FROM BUGS OR NETWORK INTERRUPTIONS.</p>
+    </section>
+
+    <section>
+      <h2>8. Limitation of Liability</h2>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE DEVELOPER (THEWHITECARP) BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM (A) YOUR USE OR INABILITY TO USE THE APPLICATION; (B) HARDWARE DEGRADATION OR BATTERY WEAR; (C) ANY THIRD-PARTY SERVICES (PLAYIT.GG, GOOGLE ADMOB, OR UPSTREAM SERVER REPOSITORIES); OR (D) WORLD FILE CORRUPTION OR DATA LOSS.</p>
+    </section>
+
+    <section>
+      <h2>9. Governing Law &amp; Severability</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of your applicable jurisdiction without regard to conflict of law principles. If any provision of these Terms is deemed unlawful, void, or unenforceable, that provision shall be deemed severable and shall not affect the validity and enforceability of remaining provisions.</p>
+    </section>
+
+    <section>
+      <h2>10. Contact Us</h2>
+      <p>For questions or notices regarding these Terms of Service, contact:</p>
+      <ul>
+        <li><strong>Developer:</strong> TheWhiteCarp</li>
+        <li><strong>Email:</strong> <a href="mailto:thewhitecarp@protonmail.com">thewhitecarp@protonmail.com</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener">https://github.com/TheWhiteCarp/CraftDroid.github.io</a></li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <p>&copy; 2026 TheWhiteCarp. CraftDroid is an independent project.</p>
-      <p class="footer-disclaimer">
-        Minecraft is a trademark of Mojang Synergies AB. CraftDroid is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft.
-      </p>
-    </div>
+    &copy; 2026 TheWhiteCarp. All rights reserved. &bull; CraftDroid for Android &bull; Verified via GitHub Pages
   </footer>
+</div>
+
 </body>
 </html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CraftDroid</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Privacy Policy for CraftDroid Android application. Discloses data handling, permissions, Google AdMob, and Playit.gg integration.">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        CraftDroid <span class="badge">Legal</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Privacy Policy for CraftDroid</h2>
+      <p><strong>Effective Date:</strong> September 27, 2026</p>
+      <p><strong>Last Updated:</strong> September 27, 2026</p>
+
+      <div class="alert alert-info">
+        <span>🛡️</span>
+        <div>
+          <strong>Privacy Summary:</strong> CraftDroid is built with a <em>Privacy-First Architecture</em>. We do not operate user accounts, do not collect personal names, emails, or phone numbers, and do not maintain user tracking or analytics databases. All server worlds, configurations, and chat logs are stored strictly on your local device.
+        </div>
+      </div>
+
+      <div class="disclaimer-box">
+        <strong>Mojang / Microsoft Disclaimer</strong>
+        NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+      </div>
+
+      <h3>1. Information We Do NOT Collect</h3>
+      <p>
+        The developer ("TheWhiteCarp", "we", "us", or "our") does not operate remote servers to harvest personal data. Specifically:
+      </p>
+      <ul>
+        <li>We do <strong>not</strong> collect personally identifiable information (PII) such as your name, email address, physical address, or phone number.</li>
+        <li>We do <strong>not</strong> require user account creation or registration to use the application.</li>
+        <li>We do <strong>not</strong> collect, inspect, or upload the Minecraft world files, player inventories, or server console logs hosted on your device.</li>
+      </ul>
+
+      <h3>2. Data Processed Locally on Your Device</h3>
+      <p>
+        To ensure stability, multiplayer connectivity, and hardware longevity, the application inspects the following device telemetry <strong>strictly in volatile memory on your local device</strong>:
+      </p>
+      <ul>
+        <li><strong>Thermal & Hardware Telemetry:</strong> Battery temperature and CPU utilization are sampled locally by the app's Hardware Monitor. This data is used solely to display system load and to trigger the <em>Thermal Protection Watchdog</em> (which automatically shuts down the server process if the device exceeds safe operational temperatures to prevent battery damage). This telemetry is never transmitted to us or any external server.</li>
+        <li><strong>Local Network Address:</strong> The app detects your local IPv4 address (e.g. <code>192.168.x.x</code>) to display your connection address on your local Wi-Fi network so other devices on your LAN can connect.</li>
+      </ul>
+
+      <h3>3. Third-Party Services and SDKs</h3>
+      <p>
+        CraftDroid integrates several trusted third-party services to deliver advertisement support, network tunneling, and open-source mod downloads:
+      </p>
+
+      <h4>A. Google AdMob (Google Mobile Ads)</h4>
+      <p>
+        We use Google AdMob to display advertisements in the application. Google AdMob may automatically collect and process certain data in accordance with Google's Privacy Policy, including:
+      </p>
+      <ul>
+        <li>Google Advertising ID (AAID)</li>
+        <li>IP address and coarse location data</li>
+        <li>App performance, diagnostic metrics, and ad interaction logs</li>
+      </ul>
+      <p>
+        You can learn more about how Google uses information from sites or apps that use their services by reviewing <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Advertising Policies</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. You can manage or reset your advertising ID in your Android device settings under <strong>Settings &gt; Privacy &gt; Ads</strong>.
+      </p>
+
+      <h4>B. Playit.gg Network Tunnel</h4>
+      <p>
+        To allow players outside your local Wi-Fi network to connect to your server without requiring router port-forwarding, CraftDroid bundles the official <code>playit-cli</code> daemon.
+      </p>
+      <ul>
+        <li>When you start a Playit tunnel, encrypted game network packets are routed through Playit.gg's global Anycast proxy network.</li>
+        <li>Playit.gg allocates a public domain name (e.g. <code>*.joinmc.link</code>) and routes incoming player connections to your device's local port.</li>
+        <li>For details on how Playit.gg handles network telemetry, consult the <a href="https://playit.gg/privacy" target="_blank" rel="noopener">Playit.gg Privacy Policy</a>.</li>
+      </ul>
+
+      <h4>C. Modrinth API</h4>
+      <p>
+        The integrated Mod &amp; Plugin Manager allows you to search for open-source Minecraft mods and plugins. Search queries and download requests are sent directly to Modrinth's public API (<code>api.modrinth.com</code>). Modrinth receives standard HTTP headers and IP addresses necessary to fulfill file downloads.
+      </p>
+
+      <h4>D. Mojang &amp; Open-Source CDNs</h4>
+      <p>
+        Server binaries (Mojang Vanilla, PaperMC, PurpurMC, FabricMC, and Bedrock Dedicated Server) are downloaded directly from their respective official repositories and CDNs over HTTPS.
+      </p>
+
+      <h3>4. Android Permissions &amp; Why We Need Them</h3>
+      <p>CraftDroid requests only the permissions strictly required to execute dedicated game servers on mobile hardware:</p>
+      <ul>
+        <li><code>android.permission.INTERNET</code>: Required for downloading server engines, routing multiplayer game traffic, loading ads, and running Playit tunnels.</li>
+        <li><code>android.permission.ACCESS_NETWORK_STATE</code> &amp; <code>ACCESS_WIFI_STATE</code>: Required to resolve your local IPv4 LAN address for multiplayer connection displays.</li>
+        <li><code>android.permission.FOREGROUND_SERVICE</code> &amp; <code>FOREGROUND_SERVICE_DATA_SYNC</code>: Required to keep the server process and tunnel daemon running continuously in the background when you switch apps or turn off the screen.</li>
+        <li><code>android.permission.WAKE_LOCK</code>: Prevents the Android operating system from putting the CPU into deep sleep while hosting active players.</li>
+        <li><code>android.permission.POST_NOTIFICATIONS</code>: Required on Android 13+ to display ongoing server status notifications and urgent thermal overheat alerts.</li>
+        <li><code>android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>: Optional permission requested to exempt the app from aggressive manufacturer battery-saving task killers.</li>
+      </ul>
+
+      <h3>5. Children's Privacy (COPPA &amp; GDPR)</h3>
+      <p>
+        CraftDroid is a server hosting management utility intended for general audiences. We do not knowingly collect any personal information from children under the age of 13 (or under 16 in the European Economic Area). If you believe a child has provided us with personal information through a third-party service, please contact us so appropriate measures can be taken.
+      </p>
+
+      <h3>6. Data Security and Retention</h3>
+      <p>
+        All user data, server world saves, player data, and configurations are stored within the application's isolated private sandbox directory (<code>context.filesDir</code>). We do not store your data on external servers. Uninstalling the application will delete all local server files and configurations from your device.
+      </p>
+
+      <h3>7. Changes to This Privacy Policy</h3>
+      <p>
+        We may update our Privacy Policy periodically to reflect changes in legal requirements or app features. Any updates will be posted to this page with an updated "Last Updated" timestamp.
+      </p>
+
+      <h3>8. Contact Information</h3>
+      <p>
+        If you have any questions or feedback regarding this Privacy Policy or CraftDroid's data practices, please open an issue on our official GitHub repository:
+      </p>
+      <p>
+        <strong>GitHub Repository:</strong> <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener">https://github.com/TheWhiteCarp/CraftDroid.github.io</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p>&copy; 2026 TheWhiteCarp. CraftDroid is an independent project.</p>
+      <p class="footer-disclaimer">
+        Minecraft is a trademark of Mojang Synergies AB. CraftDroid is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

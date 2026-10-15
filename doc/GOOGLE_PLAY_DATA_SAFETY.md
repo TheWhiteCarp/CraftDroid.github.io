@@ -1,7 +1,7 @@
 # Google Play Console: Data Safety Form Walkthrough for CraftDroid
 
 **Application Name:** CraftDroid  
-**Package Name:** `com.example.craftdroid`  
+**Package Name:** `com.thewhitecarp.craftdroid`  
 **Target:** Google Play Console > Policy > App Content > **Data Safety**
 
 Use this guide to complete the Google Play Data Safety declaration form. The answers below align with CraftDroid's local-first on-device container architecture, zero developer data collection, Playit.gg network tunneling, and Google AdMob ad integration.

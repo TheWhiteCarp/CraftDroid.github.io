@@ -1,8 +1,8 @@
 # Privacy Policy for CraftDroid
 
-**Effective Date:** September 27, 2026  
+**Effective Date:** September 27, 2026 (Last Updated: October 16, 2026)  
 **Application Name:** CraftDroid  
-**Application ID / Package:** `com.example.craftdroid`  
+**Application ID / Package:** `com.thewhitecarp.craftdroid`  
 **Developer / Publisher:** TheWhiteCarp  
 **Contact:** `thewhitecarp@protonmail.com`  
 
@@ -32,7 +32,7 @@ CraftDroid is designed with an uncompromising **local-first, privacy-by-design a
 ---
 
 ## 3. Local Storage, World Custody & Data Retention
-* Server runtime files are isolated inside: `/data/data/com.example.craftdroid/files/`.
+* Server runtime files are isolated inside: `/data/data/com.thewhitecarp.craftdroid/files/`.
 * Backups and exports use Android's Storage Access Framework (SAF), preserving total user custody.
 * Clearing app data or uninstalling the app permanently purges all local servers, configurations, and world saves immediately.
 
@@ -50,7 +50,7 @@ CraftDroid is designed with an uncompromising **local-first, privacy-by-design a
 * `FOREGROUND_SERVICE` & `FOREGROUND_SERVICE_SPECIAL_USE`: Continuous server operation while backgrounded.
 * `POST_NOTIFICATIONS`: Server status and thermal safety alerts.
 * `WAKE_LOCK`: Prevents CPU sleep while hosting active players.
-* `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS`: Exempts server process from OEM background task termination.
+* `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` *(Sideload Builds Only)*: Omitted from Google Play Store releases in compliance with Google Play policies (Play Store builds open standard Android System App Info settings). Included only in standalone sideload builds for direct battery optimization exemption.
 
 ---
 

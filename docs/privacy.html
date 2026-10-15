@@ -251,9 +251,9 @@
     <h1>Privacy Policy for CraftDroid</h1>
     <div class="meta">
       <strong>Application Name:</strong> CraftDroid &bull; 
-      <strong>Package ID:</strong> <code>com.example.craftdroid</code> &bull; 
+      <strong>Package ID:</strong> <code>com.thewhitecarp.craftdroid</code> &bull; 
       <strong>Developer / Publisher:</strong> TheWhiteCarp &bull; 
-      <strong>Effective Date:</strong> September 27, 2026 &bull; 
+      <strong>Effective Date:</strong> September 27, 2026 (Last Updated: October 16, 2026) &bull; 
       <strong>Status:</strong> <span style="color: #16a34a; font-weight: 600;">Verified GitHub Pages Deployment</span>
     </div>
   </header>
@@ -291,7 +291,7 @@
       <h2>3. Local Storage, World Custody &amp; Data Retention</h2>
       <p>All server installations, JVM dependencies, configurations, and world files reside strictly in local storage on your Android device:</p>
       <ul>
-        <li><strong>Sandboxed Rootfs Directory:</strong> Server runtime files (OpenJDK, Paper/Purpur JARs, Bedrock server binaries) are stored inside the app-specific internal directory: <code>/data/data/com.example.craftdroid/files/</code>.</li>
+        <li><strong>Sandboxed Rootfs Directory:</strong> Server runtime files (OpenJDK, Paper/Purpur JARs, Bedrock server binaries) are stored inside the app-specific internal directory: <code>/data/data/com.thewhitecarp.craftdroid/files/</code>.</li>
         <li><strong>User Storage Access Framework (SAF):</strong> When creating world backups or exporting server archives (<code>.tar.gz</code> / <code>.zip</code>), CraftDroid uses Android's native Storage Access Framework. You retain complete custody over the destination directory (e.g., Downloads, Documents, or external SD card).</li>
         <li><strong>Complete User Deletion Rights:</strong> You can completely erase any server environment, reset credentials, or clear worlds at any time through the in-app Worlds and Settings menus. Clearing application data via Android System Settings or uninstalling CraftDroid permanently deletes all local server instances, world data, and configurations immediately from your device.</li>
       </ul>
@@ -368,8 +368,8 @@
           </tr>
           <tr>
             <td><code>android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
-            <td>Special</td>
-            <td>Allows users to exempt CraftDroid from aggressive OEM background task killers, preventing premature server crashes.</td>
+            <td>Special (Sideload Builds Only)</td>
+            <td>Omitted from Google Play Store releases in compliance with Google Play policies (Play Store builds open standard Android System App Info settings so users can manually select "Unrestricted" battery usage). Included only in standalone sideload builds for direct battery optimization exemption.</td>
           </tr>
           <tr>
             <td><code>android.permission.VIBRATE</code></td>
@@ -428,7 +428,7 @@
         <li><strong>Developer / Publisher:</strong> TheWhiteCarp</li>
         <li><strong>Contact Email:</strong> <a href="mailto:thewhitecarp@protonmail.com">thewhitecarp@protonmail.com</a></li>
         <li><strong>Project Repository:</strong> <a href="https://github.com/TheWhiteCarp/CraftDroid.github.io" target="_blank" rel="noopener">https://github.com/TheWhiteCarp/CraftDroid.github.io</a></li>
-        <li><strong>Application:</strong> CraftDroid (<code>com.example.craftdroid</code>)</li>
+        <li><strong>Application:</strong> CraftDroid (<code>com.thewhitecarp.craftdroid</code>)</li>
       </ul>
     </section>
   </main>
